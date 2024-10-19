@@ -1,13 +1,22 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Importa CommonModule para usar *ngIf
+import { LoginComponent } from './componentes/login/login.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
+import{CrudComponent} from './componentes/crud/crud.component';
+import { RouterModule  } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, LoginComponent, RegistroComponent,CrudComponent,RouterModule,HttpClientModule], // Asegúrate de agregar CommonModule aquí
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto';
+
 }
+

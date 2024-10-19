@@ -1,0 +1,66 @@
+<div class="container mx-auto mt-8">
+    <h1 class="text-3xl font-bold text-blue-600 mb-4">Módulo de Configuración</h1>
+  
+    <!-- Formulario de CRUD -->
+    <form class="bg-gray-100 p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">Formulario de Configuración</h2>
+  
+      <div class="mb-4">
+        <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre de la Sección:</label>
+        <select id="nombre" name="nombre" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="crud">CRUD</option>
+          <option value="politica">Política de Privacidad</option>
+          <option value="terminos">Términos y Condiciones</option>
+          <option value="deslinde">Deslinde Legal</option>
+          <option value="perfil">Perfil de la Empresa</option>
+        </select>
+      </div>
+  
+      <div class="mb-4">
+        <label for="contenido" class="block text-gray-700 font-bold mb-2">Contenido:</label>
+        <textarea id="contenido" name="contenido" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingresa el contenido de la sección"></textarea>
+      </div>
+  
+      <!-- Botones -->
+      <div class="flex justify-between">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Agregar</button>
+        <button type="button" class="bg-yellow-400 text-white px-4 py-2 rounded-md hover:bg-yellow-500">Actualizar</button>
+        <button type="button" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">Eliminar</button>
+      </div>
+    </form>
+  
+    <!-- Tabla para mostrar datos (Lectura) -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">Listado de Secciones</h2>
+      <table class="min-w-full bg-white">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 bg-blue-500 text-white">Sección</th>
+            <th class="py-2 px-4 bg-blue-500 text-white">Contenido</th>
+            <th class="py-2 px-4 bg-blue-500 text-white">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Ejemplo de filas con datos -->
+          <tr>
+            <td class="border px-4 py-2">CRUD</td>
+            <td class="border px-4 py-2">Gestión de datos para CRUD</td>
+            <td class="border px-4 py-2">
+              <button class="bg-yellow-400 text-white px-2 py-1 rounded-md hover:bg-yellow-500">Editar</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Política de Privacidad</td>
+            <td class="border px-4 py-2">Política de manejo de datos personales</td>
+            <td class="border px-4 py-2">
+              <button class="bg-yellow-400 text-white px-2 py-1 rounded-md hover:bg-yellow-500">Editar</button>
+              <button class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600">Eliminar</button>
+            </td>
+          </tr>
+          <!-- Más filas pueden agregarse dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
